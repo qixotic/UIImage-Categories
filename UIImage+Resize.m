@@ -42,9 +42,7 @@
                                  thumbnailSize);
     UIImage *croppedImage = [resizedImage croppedImage:cropRect];
     
-    UIImage *transparentBorderImage = borderSize ? [croppedImage transparentBorderImage:borderSize] : croppedImage;
-    
-    return [transparentBorderImage roundedCornerImage:cornerRadius borderSize:borderSize];
+    return [croppedImage roundedCornerImage:cornerRadius borderSize:borderSize];
 }
 
 // Returns a rescaled copy of the image, taking into account its orientation
